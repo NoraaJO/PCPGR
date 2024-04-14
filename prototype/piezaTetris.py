@@ -24,6 +24,6 @@ class PiezaTetris(prototype):
 
     def pintarForma(self):
 
-        return f"Forma: {self.forma}, Color: {self.color}"
+        return f"Forma: {self.forma}, Color: {self.color}, Posición: {self.posicion}"
  
     
