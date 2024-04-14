@@ -16,7 +16,7 @@ class usuario:
         self.oficina = oficina
         self.sede = Sede
     def toString(self):
-        return (f'Nombre: {self.nombre} Apellido: {self.apellido}, Cedula: {self.cedula}, '
+        return (f'Id: {self.id}, Nombre: {self.nombre} Apellido: {self.apellido}, Cedula: {self.cedula}, '
                 f'Telefono: {self.telefono}, Oficina: {self.oficina}, Sede: {self.sede}')
     #Seccion GETTER
     def getId(self):

@@ -79,6 +79,34 @@ def consultar_area(mi_area):
             break
         else:
             print("Opción no válida, intente de nuevo.")
+def consultarDatoArea(mi_area):
+    while True:
+        print("\nMenú de Áreas")
+        print("1. Área Desarrollo")
+        print("2. Área Diseño")
+        print("3. Área Marketing")
+        print("4. Área Contabilidad")
+        print("5. Volver")
+
+        opcion = input("Seleccione una opción: ")
+
+        if opcion in ['1', '2', '3', '4']:
+            area_idx = int(opcion)
+            disponibles = mi_area.obtenerDatosArea(area_idx)
+            if area_idx == 1 :
+                print("----------Area Desarrollo----------")
+            elif area_idx ==2 :
+                print("----------Area Diseño----------")
+            elif area_idx == 3:
+                print("----------Area Marketing----------")
+            elif area_idx == 4:
+                print("----------Area Contabilidad----------")
+            for usuario in disponibles:
+                print(usuario.toString())
+        elif opcion == '5':
+            break
+        else:
+            print("Opción no válida, intente de nuevo.")
 
 def dar_de_baja(mi_area):
     print("\nDar Baja Usuario")
@@ -107,10 +135,10 @@ def main_menu():
     mi_area = areas(maxAreaDis=5, maxAreaDevs=5, maxAreaMarke=5, maxAreaContabilidad=5)
     while True:
         print("\nMenú Principal")
-        print("1. Seleccionar Área")
+        print("1. Campos disponibles Área")
         print("2. Registrar Usuario")
         print("3. Dar baja Usuario")
-        print("4. Opción 4")
+        print("4. Informacion de área")
         print("5. Salir")
         opcion = input("Seleccione una opción: ")
         
@@ -121,7 +149,7 @@ def main_menu():
         elif opcion == '3':
             dar_de_baja(mi_area)
         elif opcion == '4':
-            print("Mundo")
+            consultarDatoArea(mi_area)
         elif opcion == '5':
             break
         else:

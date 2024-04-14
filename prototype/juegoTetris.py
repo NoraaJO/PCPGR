@@ -53,16 +53,7 @@ class JuegoTetris:
             else:
                 print("Opción Invalida")
         print("Gracias Por Jugar!!")
-            
-                    
 
-    def setPiezasIniciales(self):
-        self.piezaActual = self.piezaActual.copy(color = random.choice(["J", "L", "T", "Z", "S", "E", "O"]), 
-                                                 forma = random.choice(["J", "L", "T", "Z", "S", "E", "O"]),
-                                                 posicion = 0)
-        self.piezaSiguiente = self.piezaSiguiente.copy(color = random.choice(["J", "L", "T", "Z", "S", "E", "O"]), 
-                                                 forma = random.choice(["J", "L", "T", "Z", "S", "E", "O"]),
-                                                 posicion = 0)
 
 if __name__== "__main__":
     formas = ["J", "L", "T", "Z", "S", "E", "O"]
